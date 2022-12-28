@@ -1,0 +1,13 @@
+.container-tabs {
+  background: azure;
+  display: block;
+}
+
+.tabs {
+  display: flex;
+}
+
+.btn_tab {
+  background: gold;
+  padding: 6px 8px;
+}

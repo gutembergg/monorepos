@@ -1,14 +1,10 @@
 <template>
   <div>
     <div>Title</div>
-    <button>Title</button>
+    <button>Title-test</button>
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import "./Title.css";
-
-export default {
-  name: "new-title",
-};
 </script>
