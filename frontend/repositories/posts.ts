@@ -1,9 +1,11 @@
-export const getPosts = async () => {
-  const { data: users } = await useFetch(
-    "https://jsonplaceholder.typicode.com/users"
+export const getPosts = async (
+  id: string
+): Promise<{ data: any; statusCode: number }> => {
+  const { data: user } = await useFetch(
+    `https://jsonplaceholder.typicode.com/users/${id}`
   );
 
-  console.log("Response:: ", users);
+  console.log("Response:: ", user);
 
-  return { data: users, statusCode: 200 };
+  return { data: user, statusCode: 200 };
 };

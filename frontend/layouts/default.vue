@@ -16,7 +16,7 @@
           </button>
 
           <button>
-            <NuxtLink to="/users/guto">Users page</NuxtLink>
+            <NuxtLink to="/users">Users page</NuxtLink>
           </button>
         </div>
       </nav>

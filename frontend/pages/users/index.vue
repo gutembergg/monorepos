@@ -1,27 +1,26 @@
 <template>
   <div>
     <ul>
-      <li v-for="user in users" :key="user.id">{{ user.name }}</li>
+      <li v-for="user in users" :key="user.id">
+        <NuxtLink :to="'/users/' + user.id">{{ user.name }}</NuxtLink>
+      </li>
     </ul>
-    <button @click="showPosts">oiioioi</button>
   </div>
 </template>
 
-<script setup>
-import { getPosts } from "../../repositories/posts";
+<script setup lang="ts">
+import { ref, useFetch } from "#imports";
+
+const router = useRoute();
+console.log("router", router);
 
 const { data: users } = await useFetch(
   "https://jsonplaceholder.typicode.com/users"
 );
 
-const showPosts = async () => {
-  const posts = await getPosts();
-  console.log("POSST", posts);
+const showPosts = async (id: string) => {
+  router.path;
 };
-
-/* const { data: users } = await useFetch(
-  "https://jsonplaceholder.typicode.com/users"
-); */
 </script>
 
 <style scoped></style>

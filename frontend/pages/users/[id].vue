@@ -1,12 +1,14 @@
 <template>
-  <div>User ID:{{ id }}</div>
+  <div>User Name:{{ user.name }}</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { getPosts } from "../../repositories/posts";
+
 const { id } = useRoute().params;
 definePageMeta({
   layout: "users",
 });
-// When accessing /posts/1, route.params.id will be 1
-console.log(id);
+
+const { data: user } = await getPosts(id as string);
 </script>

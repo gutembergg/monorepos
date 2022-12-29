@@ -20,6 +20,6 @@ export default defineComponent({
   <div>
     <Button label="New Button" primary userName="Test-2" />
     <NewTitle />
-    <TheTabs active="1" />
+    <TheTabs active="1" userName="Guto" />
   </div>
 </template>
